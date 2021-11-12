@@ -1,1 +1,3 @@
-<p>Locota</p>
+<div *ngFor="let ticket of tickets">
+  <p [innerHTML]="ticket.id"></p>
+</div>
