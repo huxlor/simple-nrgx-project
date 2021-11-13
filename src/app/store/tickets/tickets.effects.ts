@@ -10,6 +10,7 @@ import {
   withLatestFrom,
 } from 'rxjs/operators';
 import { throwError, of } from 'rxjs';
+import { Tickets } from '../../core/models/tickets.models';
 
 @Injectable()
 export class TicketEffects {
@@ -20,7 +21,8 @@ export class TicketEffects {
       ofType(ticketsActions.requestTickets),
       switchMap((_) =>
         this._ticketsService.getTickets().pipe(
-          map((tickets: any) => {
+          map((resp: Tickets) => {
+            const { tickets } = resp;
             return ticketsActions.successTickets({ tickets });
           }),
           catchError((error) => {

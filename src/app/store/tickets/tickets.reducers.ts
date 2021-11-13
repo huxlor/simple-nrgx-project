@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { createReducer, on, Action } from '@ngrx/store';
 import { TicketState } from './tickets.state';
 import * as ticketsActions from './tickets.actions';

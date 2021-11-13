@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { TicketState } from './tickets.state';
 

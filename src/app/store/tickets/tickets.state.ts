@@ -1,7 +1,7 @@
-import { ITicketsList } from '../../core/models/tickets.models';
+import { Ticket } from '../../core/models/tickets.models';
 
 export interface TicketState {
-  tickets: ITicketsList[];
+  tickets: Ticket[];
   isLoading: boolean;
   error: string;
 }

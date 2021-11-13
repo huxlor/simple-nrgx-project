@@ -1,7 +1,5 @@
-//@ts-nocheck
-
 import { Component, OnInit, Input } from '@angular/core';
-import { ITicketsList, Ticket } from '../../core/models/tickets.models';
+import { Ticket } from '../../core/models/tickets.models';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +7,7 @@ import { ITicketsList, Ticket } from '../../core/models/tickets.models';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  @Input() tickets: any[];
+  @Input() tickets: Ticket[];
 
   constructor() {}
 
