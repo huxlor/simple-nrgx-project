@@ -20,8 +20,5 @@ export class TicketsComponent implements OnInit {
 
   ngOnInit(): void {
     this._store.dispatch(ticketsActions.requestTickets());
-    this.tickets$.subscribe((resp) => {
-      console.log(resp);
-    });
   }
 }
